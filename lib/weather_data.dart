@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart'as http;
 import 'dart:convert';
-import 'key.dart';
+//import 'key.dart';
 
 
 
@@ -51,7 +51,7 @@ class WeatherData {
       print(data);
 
       weather = data['weather'];
-      print(weather);
+      print(" Weather is $weather");
 
       Map weatherData = weather![0];
       print(weatherData);
@@ -60,7 +60,7 @@ class WeatherData {
       iconId = weatherData['icon'];
 
       sys = data['sys'];
-      print(sys);
+      print(" sys is $sys");
       sunrise_time = sys!["sunrise"];
       sunset_time = sys!["sunset"];
       DateTime date = DateTime.fromMillisecondsSinceEpoch(
